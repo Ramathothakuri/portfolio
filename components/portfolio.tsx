@@ -1,10 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import dynamic from "next/dynamic";
 import { type WheelEvent, useEffect, useRef, useState } from "react";
-
-const SystemField = dynamic(() => import("./system-field"), { ssr: false });
+import SystemField from "./system-field";
 
 const techColumns = [
   {
