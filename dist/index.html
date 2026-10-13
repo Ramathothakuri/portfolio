@@ -7,12 +7,12 @@
   <meta name="theme-color" content="#070a0c" />
   <meta property="og:title" content="Ramakrishna T — Full Stack Developer" />
   <meta property="og:description" content="Eight years of engineering secure, scalable enterprise systems." />
-  <meta property="og:image" content="https://ramakrishna-full-stack.ramakrishnaa0247.chatgpt.site/assets/systems-architecture.png" />
+  <meta property="og:image" content="https://ramakrishna-full-stack.ramakrishnaa0247.chatgpt.site/assets/systems-architecture-v2.webp" />
   <link rel="canonical" href="https://ramakrishna-full-stack.ramakrishnaa0247.chatgpt.site" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,ital,wght@6..96,400..900;6..96,400..900&amp;family=DM+Mono:wght@300;400;500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles-v2.css" />
   <title>Ramakrishna T — Full Stack Developer</title>
 </head>
 <body>
@@ -38,7 +38,7 @@
   <main id="main">
     <section class="hero" id="top">
       <div class="hero-image parallax" data-speed="0.12" aria-hidden="true">
-        <img src="assets/systems-architecture.png" alt="" />
+        <img src="assets/systems-architecture-v2.webp" alt="" fetchpriority="high" />
       </div>
       <div class="hero-shade" aria-hidden="true"></div>
       <div class="hero-grid">
@@ -48,7 +48,7 @@
         </div>
         <h1 class="reveal">
           <span>Systems that</span>
-          <span class="outline">hold up</span>
+          <span class="outline"><em>hold up</em></span>
           <span>in the real world.</span>
         </h1>
         <div class="hero-bottom">
@@ -64,6 +64,7 @@
           <div><strong>21</strong><span>Modern Java<br />in production</span></div>
         </div>
       </div>
+      <div class="canvas-caption" aria-hidden="true"><span>Live system field</span><i></i><span>Three.js · 60 FPS</span></div>
       <div class="scroll-cue" aria-hidden="true"><span>Scroll to inspect</span><i></i></div>
     </section>
 
@@ -87,8 +88,8 @@
 
       <article class="project project-featured reveal">
         <div class="project-media parallax" data-speed="0.08">
-          <img src="assets/financial-systems.png" alt="Abstract 3D visualization of transaction streams moving through validation gates" />
-          <span class="image-note">Original conceptual artwork</span>
+          <img src="assets/financial-systems-v2.webp" alt="High-resolution abstract visualization of transaction streams moving through curved validation gates" loading="lazy" decoding="async" />
+          <span class="image-note">Original 3D editorial artwork · 3K</span>
         </div>
         <div class="project-copy">
           <div class="project-index">01 / Fintech operations</div>
@@ -105,8 +106,8 @@
 
       <article class="project project-reverse reveal">
         <div class="project-media parallax" data-speed="0.06">
-          <img src="assets/healthcare-systems.png" alt="Abstract 3D visualization of secure healthcare data flowing between connected modules" />
-          <span class="image-note">Original conceptual artwork</span>
+          <img src="assets/healthcare-systems-v2.webp" alt="High-resolution abstract visualization of secure healthcare data moving through biomorphic glass systems" loading="lazy" decoding="async" />
+          <span class="image-note">Original 3D editorial artwork · 3K</span>
         </div>
         <div class="project-copy">
           <div class="project-index">02 / Healthcare delivery</div>
@@ -167,7 +168,7 @@
       <div class="section-shell">
         <div class="section-heading reveal">
           <div class="section-label"><span>04</span> Technology Kanban</div>
-          <div class="kanban-intro"><p>Every technology represented in the résumé, organized by where it contributes.</p><button id="reset-board" type="button">Reset board ↺</button></div>
+          <div class="kanban-intro"><p>Every technology represented in the résumé, organized by where it contributes. The board is intentionally fixed—browse, don’t rearrange.</p></div>
         </div>
       </div>
       <div class="kanban-wrap reveal">
@@ -203,7 +204,7 @@
             </div>
           </section>
         </div>
-        <p class="drag-hint">Drag cards between columns · Shift + mouse wheel to move horizontally</p>
+        <p class="board-hint">Five fixed lanes · Scroll horizontally to inspect the full technology atlas</p>
       </div>
     </section>
 
@@ -246,6 +247,9 @@
     <a href="#top">Back to top ↑</a>
   </footer>
 
-  <script type="module" src="script.js"></script>
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}
+  </script>
+  <script type="module" src="script-v2.js"></script>
 </body>
 </html>
