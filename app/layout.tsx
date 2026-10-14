@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteUrl = "https://ramakrishna-full-stack.ramakrishnaa0247.chatgpt.site";
+const vercelProductionDomain = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (vercelProductionDomain
+    ? `https://${vercelProductionDomain}`
+    : "http://localhost:3000");
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
