@@ -159,7 +159,7 @@ export default function Portfolio() {
         </section>
 
         <section className="experience section-shell" id="experience">
-          <div className="section-heading reveal"><div className="section-label"><span>02</span> Experience</div><p>A career shaped by complex workflows, shared platforms, and production responsibility.</p></div>
+          <div className="section-heading reveal"><h2 className="section-title">Experience</h2></div>
           <div className="timeline">
             {experience.map((item) => <article className="timeline-row reveal" key={item.company}><div className="timeline-date">{item.date}</div><div className="timeline-dot" /><div className="timeline-main"><h3>{item.role}</h3><p>{item.company}</p></div><div className="timeline-detail"><p>{item.detail}</p><span>{item.domain}</span></div></article>)}
           </div>
@@ -168,7 +168,6 @@ export default function Portfolio() {
         <section className="stack" id="stack">
           <div className="section-shell">
             <div className="stack-heading reveal">
-              <div className="section-label"><span>03</span> Capabilities</div>
               <h2>Tech stack</h2>
             </div>
             <div className="stack-grid reveal" aria-label="Technology stack">
@@ -189,13 +188,13 @@ export default function Portfolio() {
         </section>
 
         <section className="principles section-shell">
-          <div className="section-label reveal"><span>04</span> Working principles</div>
-          <div className="principles-grid"><article className="reveal"><span>01</span><h3>Make failure explicit.</h3><p>Timeouts, retries, validation, dead-letter handling, and actionable error states belong in the design—not the cleanup.</p></article><article className="reveal"><span>02</span><h3>Observe the whole path.</h3><p>Logs, metrics, traces, correlation identifiers, dashboards, and health signals turn production behavior into something teams can reason about.</p></article><article className="reveal"><span>03</span><h3>Fit the platform.</h3><p>Strong solutions respect existing architecture, security boundaries, data ownership, and the way users already complete their work.</p></article></div>
+          <div className="principles-heading reveal"><h2 className="section-title">Working principles</h2></div>
+          <div className="principles-grid reveal"><article><span>01</span><h3>Make failure explicit.</h3><p>Timeouts, retries, validation, dead-letter handling, and actionable error states belong in the design—not the cleanup.</p></article><article><span>02</span><h3>Observe the whole path.</h3><p>Logs, metrics, traces, correlation identifiers, dashboards, and health signals turn production behavior into something teams can reason about.</p></article><article><span>03</span><h3>Fit the platform.</h3><p>Strong solutions respect existing architecture, security boundaries, data ownership, and the way users already complete their work.</p></article></div>
         </section>
 
         <section className="education section-shell">
-          <div className="section-label reveal"><span>05</span> Education</div>
-          <div className="education-grid reveal"><article><span>Master of Science</span><h3>Computer Science</h3><p>Campbellsville University · Kentucky, USA</p><strong>GPA 3.9 / 4.0</strong></article><article><span>Bachelor&apos;s degree</span><h3>Computer Science</h3><p>Anurag Engineering College · India</p><strong>GPA 7.2 / 10</strong></article></div>
+          <div className="education-heading reveal"><h2 className="section-title">Education</h2></div>
+          <div className="education-grid reveal"><article><span className="degree-level">Master&apos;s degree</span><h3>Computer Science</h3><p>Campbellsville University · Kentucky, USA</p><strong>GPA 3.9 / 4.0</strong></article><article><span className="degree-level">Bachelor&apos;s degree</span><h3>Computer Science</h3><p>Anurag Engineering College · India</p><strong>GPA 7.2 / 10</strong></article></div>
         </section>
 
         <section className="contact" id="contact">
@@ -205,12 +204,11 @@ export default function Portfolio() {
             <p className="eyebrow reveal">Open to the next meaningful challenge</p>
             <h2 className="reveal">Let’s build software that stays dependable when the stakes are real.</h2>
             <div className="contact-actions reveal"><a className="contact-primary" href="mailto:rthothakuri@gmail.com">rthothakuri@gmail.com <span>↗</span></a><a href="tel:+19453331677">+1 945 333 1677</a><a href="https://www.linkedin.com/search/results/people/?keywords=Ramakrishna%20T%20Full%20Stack%20Developer%20FIS" target="_blank" rel="noreferrer" title="Search LinkedIn for Ramakrishna T — exact profile not verified">LinkedIn search <span>↗</span></a></div>
-            <p className="profile-note">The exact LinkedIn profile could not be verified from public search results. This link opens a targeted LinkedIn people search.</p>
           </div>
         </section>
       </main>
 
-      <footer><span>© {new Date().getFullYear()} Ramakrishna T</span><span>Designed around clarity, resilience &amp; motion.</span><a href="#top">Back to top ↑</a></footer>
+      <footer><span>© {new Date().getFullYear()} Ramakrishna T</span><span>Designed around clarity, resilience &amp; motion.</span><div className="footer-links"><a href="https://github.com/Ramathothakuri" target="_blank" rel="noreferrer">GitHub ↗</a><a href="#top">Back to top ↑</a></div></footer>
     </>
   );
 }
