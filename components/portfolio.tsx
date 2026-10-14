@@ -119,7 +119,6 @@ export default function Portfolio() {
           <span className="brand-copy">Ramakrishna T<small>Full Stack Developer</small></span>
         </a>
         <nav aria-label="Primary navigation">
-          <a href="#work" onClick={closeMenu}>Work</a>
           <a href="#experience" onClick={closeMenu}>Experience</a>
           <a href="#stack" onClick={closeMenu}>Stack</a>
           <a className="nav-cta" href="#contact" onClick={closeMenu}>Let&apos;s talk <span>↗</span></a>
@@ -139,7 +138,7 @@ export default function Portfolio() {
             <div className="hero-bottom">
               <p className="hero-intro reveal">I build secure, observable enterprise applications—from reactive Java services to accessible React workflows—across fintech, healthcare, and banking.</p>
               <div className="hero-actions reveal">
-                <a className="button button-primary" href="#work">Explore selected work <span>↓</span></a>
+                <a className="button button-primary" href="#experience">View experience <span>↓</span></a>
                 <a className="button button-ghost" href="/Ramakrishna_T_Resume.docx" download>Download résumé <span>↘</span></a>
               </div>
             </div>
@@ -165,52 +164,15 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <section className="work section-shell" id="work">
-          <div className="section-heading reveal"><div className="section-label"><span>02</span> Selected work</div><p>Three domains. One standard: resilient software with clear operational behavior.</p></div>
-          <article className="project project-featured reveal">
-            <div className="project-media parallax" data-speed="0.08">
-              <Image src="/assets/financial-systems-v2.webp" alt="High-resolution abstract visualization of transaction streams moving through curved validation gates" fill sizes="(max-width: 1080px) 100vw, 60vw" style={{ objectFit: "cover", height: "116%" }} />
-              <span className="image-note">Original 3D editorial artwork · 3K</span>
-            </div>
-            <div className="project-copy">
-              <div className="project-index">01 / Fintech operations</div>
-              <h3>Transaction search, investigation, reconciliation, and case resolution.</h3>
-              <p>Leading full-stack delivery for operational applications built with Java 21, Spring Boot, WebFlux, React 18, and TypeScript. The work connects secure APIs, performant PostgreSQL search, event-driven processing, and permission-aware interfaces.</p>
-              <ul className="project-outcomes"><li><span>API behavior</span> Reactive endpoints, timeouts, controlled retries</li><li><span>Data access</span> Query-plan review, targeted indexes, keyset pagination</li><li><span>Reliability</span> Idempotency, correlation IDs, dead-letter queues</li></ul>
-              <div className="tag-row"><span>Java 21</span><span>Spring WebFlux</span><span>React 18</span><span>AWS</span></div>
-            </div>
-          </article>
-
-          <article className="project project-reverse reveal">
-            <div className="project-media parallax" data-speed="0.06">
-              <Image src="/assets/healthcare-systems-v2.webp" alt="High-resolution abstract visualization of secure healthcare data moving through biomorphic glass systems" fill sizes="(max-width: 1080px) 100vw, 60vw" style={{ objectFit: "cover", height: "116%" }} />
-              <span className="image-note">Original 3D editorial artwork · 3K</span>
-            </div>
-            <div className="project-copy">
-              <div className="project-index">02 / Healthcare delivery</div>
-              <h3>Provider ordering and guided patient-payment workflows inside a clinical platform.</h3>
-              <p>Delivered a full-stack module that supported PCIT order creation, validation, payment coordination, and status history while fitting existing authentication, navigation, and patient context.</p>
-              <ul className="project-outcomes"><li><span>Interoperability</span> FHIR R4 resources and transaction Bundles</li><li><span>Integration</span> HL7 v2 ADT and ORM workflow support</li><li><span>Security</span> Tokenized payments and protected health information controls</li></ul>
-              <div className="tag-row"><span>Java 17</span><span>FHIR R4</span><span>HL7 v2</span><span>React</span></div>
-            </div>
-          </article>
-
-          <article className="project project-textual reveal">
-            <div className="project-number" aria-hidden="true">03</div>
-            <div className="project-copy"><div className="project-index">03 / Banking modernization</div><h3>Modern Java and React capabilities around established core platforms.</h3><p>Built account-servicing and payment modules while legacy systems remained operational—normalizing inconsistent downstream behavior into stable REST contracts and durable event flows.</p></div>
-            <div className="project-specs"><div><span>Services</span><strong>Spring Boot · MVC · JPA</strong></div><div><span>Messaging</span><strong>Kafka · RabbitMQ</strong></div><div><span>Delivery</span><strong>Docker · Kubernetes · Jenkins</strong></div></div>
-          </article>
-        </section>
-
         <section className="experience section-shell" id="experience">
-          <div className="section-heading reveal"><div className="section-label"><span>03</span> Experience</div><p>A career shaped by complex workflows, shared platforms, and production responsibility.</p></div>
+          <div className="section-heading reveal"><div className="section-label"><span>02</span> Experience</div><p>A career shaped by complex workflows, shared platforms, and production responsibility.</p></div>
           <div className="timeline">
             {experience.map((item) => <article className="timeline-row reveal" key={item.company}><div className="timeline-date">{item.date}</div><div className="timeline-dot" /><div className="timeline-main"><h3>{item.role}</h3><p>{item.company}</p></div><div className="timeline-detail"><p>{item.detail}</p><span>{item.domain}</span></div></article>)}
           </div>
         </section>
 
         <section className="stack" id="stack">
-          <div className="section-shell"><div className="section-heading reveal"><div className="section-label"><span>04</span> Technology Kanban</div><div className="kanban-intro"><p>Every technology represented in the résumé, organized by where it contributes. The board is intentionally fixed—browse, don’t rearrange.</p></div></div></div>
+          <div className="section-shell"><div className="section-heading reveal"><div className="section-label"><span>03</span> Technology Kanban</div><div className="kanban-intro"><p>Every technology represented in the résumé, organized by where it contributes. The board is intentionally fixed—browse, don’t rearrange.</p></div></div></div>
           <div className="kanban-wrap reveal">
             <div className="kanban" id="kanban" aria-label="Technology kanban board" onWheel={onBoardWheel}>
               {techColumns.map((column) => <section className="kanban-column" key={column.id}><header><span className="column-index">{column.id}</span><h3>{column.title}</h3><b>{column.items.length}</b></header><div className="kanban-list">{column.items.map((item) => <div className="tech-card" key={item}>{item}</div>)}</div></section>)}
@@ -220,12 +182,12 @@ export default function Portfolio() {
         </section>
 
         <section className="principles section-shell">
-          <div className="section-label reveal"><span>05</span> Working principles</div>
+          <div className="section-label reveal"><span>04</span> Working principles</div>
           <div className="principles-grid"><article className="reveal"><span>01</span><h3>Make failure explicit.</h3><p>Timeouts, retries, validation, dead-letter handling, and actionable error states belong in the design—not the cleanup.</p></article><article className="reveal"><span>02</span><h3>Observe the whole path.</h3><p>Logs, metrics, traces, correlation identifiers, dashboards, and health signals turn production behavior into something teams can reason about.</p></article><article className="reveal"><span>03</span><h3>Fit the platform.</h3><p>Strong solutions respect existing architecture, security boundaries, data ownership, and the way users already complete their work.</p></article></div>
         </section>
 
         <section className="education section-shell">
-          <div className="section-label reveal"><span>06</span> Education</div>
+          <div className="section-label reveal"><span>05</span> Education</div>
           <div className="education-grid reveal"><article><span>Master of Science</span><h3>Computer Science</h3><p>Campbellsville University · Kentucky, USA</p><strong>GPA 3.9 / 4.0</strong></article><article><span>Bachelor&apos;s degree</span><h3>Computer Science</h3><p>Anurag Engineering College · India</p><strong>GPA 7.2 / 10</strong></article></div>
         </section>
 
