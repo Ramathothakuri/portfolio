@@ -123,12 +123,12 @@ export default function Portfolio() {
       <main id="main">
         <section className="hero" id="top">
           <div className="hero-image parallax" data-speed="0.12" aria-hidden="true">
-            <Image src="/assets/systems-architecture-v2.webp" alt="" fill priority sizes="100vw" style={{ objectFit: "cover", height: "114%" }} />
+            <Image src="/assets/systems-architecture-v2.webp" alt="" fill priority sizes="100vw" />
           </div>
           <div className="hero-shade" aria-hidden="true" />
           <div className="hero-grid">
-            <div className="hero-kicker reveal"><span className="status-dot" />Senior full-stack engineer · Charleston, SC</div>
-            <h1 className="reveal"><span>Systems that</span><span className="outline"><em>hold up</em></span><span>in the real world.</span></h1>
+            <div className="hero-kicker reveal"><span className="status-dot" />Senior full-stack engineer</div>
+            <h1 className="reveal"><span>About</span><span className="outline"><em>me.</em></span></h1>
             <div className="hero-bottom">
               <p className="hero-intro reveal">Ramakrishna is a senior full-stack developer with 8+ years of experience building secure Java, Spring, React, and AWS systems for fintech, healthcare, and banking.</p>
               <div className="hero-actions reveal">
