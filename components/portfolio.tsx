@@ -150,7 +150,15 @@ export default function Portfolio() {
             <p className="eyebrow reveal">Profile</p>
             <h2 className="reveal">Full-stack engineering for real-world systems.</h2>
             <div className="manifesto-columns reveal">
-              <p>Ramakrishna builds backend services, responsive interfaces, cloud deployments, and reliable integrations—with a practical focus on software that stays clear and supportable in production.</p>
+              <p>With 8+ years across fintech, healthcare, and banking, Ramakrishna works across backend services, responsive interfaces, cloud platforms, data, messaging, security, testing, and production support.</p>
+            </div>
+            <div className="profile-tags reveal" aria-label="Core capabilities">
+              <span>Java &amp; Spring</span>
+              <span>React &amp; TypeScript</span>
+              <span>AWS &amp; Kubernetes</span>
+              <span>PostgreSQL &amp; messaging</span>
+              <span>Security &amp; APIs</span>
+              <span>Testing &amp; observability</span>
             </div>
           </div>
         </section>
@@ -184,14 +192,7 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <section className="principles">
-          <div className="section-shell">
-            <div className="principles-heading reveal"><h2 className="section-title">Working principles</h2></div>
-            <div className="principles-grid reveal"><article><span>01</span><h3>Make failure explicit.</h3><p>Timeouts, retries, validation, dead-letter handling, and actionable error states belong in the design—not the cleanup.</p></article><article><span>02</span><h3>Observe the whole path.</h3><p>Logs, metrics, traces, correlation identifiers, dashboards, and health signals turn production behavior into something teams can reason about.</p></article><article><span>03</span><h3>Fit the platform.</h3><p>Strong solutions respect existing architecture, security boundaries, data ownership, and the way users already complete their work.</p></article></div>
-          </div>
-        </section>
-
-        <section className="education">
+        <section className="education" id="education">
           <div className="section-shell">
             <div className="education-heading reveal"><h2 className="section-title">Education</h2></div>
             <div className="education-grid reveal"><article><span className="degree-level">Master&apos;s degree</span><h3>Computer Science</h3><p>Campbellsville University · Kentucky, USA</p><strong>GPA 3.9 / 4.0</strong></article><article><span className="degree-level">Bachelor&apos;s degree</span><h3>Computer Science</h3><p>Anurag Engineering College · India</p><strong>GPA 7.2 / 10</strong></article></div>
