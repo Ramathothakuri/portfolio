@@ -110,7 +110,6 @@ export default function Portfolio() {
       <header ref={headerRef} className="site-header">
         <a className="brand" href="#top" aria-label="Ramakrishna T — home" onClick={closeMenu}>
           <span className="brand-mark">RT</span>
-          <span className="brand-copy">Ramakrishna T<small>Full Stack Developer</small></span>
         </a>
         <nav aria-label="Primary navigation">
           <a href="#about" onClick={closeMenu}>About</a>
@@ -122,29 +121,33 @@ export default function Portfolio() {
       </header>
 
       <main id="main">
-        <section className="hero" id="top">
+        <div className="hero" id="top" aria-hidden="true">
           <div className="hero-image parallax" data-speed="0.12" aria-hidden="true">
             <Image src="/assets/systems-architecture-v2.webp" alt="" fill priority sizes="100vw" />
           </div>
           <div className="hero-shade" aria-hidden="true" />
-          <div className="hero-grid">
-            <div className="hero-kicker reveal"><span className="status-dot" />Welcome · Senior Full Stack Developer</div>
-            <h1 className="welcome-title reveal"><span>Ramakrishna</span><span className="outline"><em>T.</em></span></h1>
-            <div className="hero-bottom">
-              <p className="hero-intro reveal">I build secure, reliable web applications across Java, Spring Boot, React, TypeScript, and AWS—turning complex business workflows into clear digital products.</p>
-              <div className="hero-actions reveal">
-                <a className="button button-primary" href="#about">About me <span>↓</span></a>
-                <a className="button button-ghost" href="#experience">View experience <span>↘</span></a>
-              </div>
+        </div>
+
+        <section className="experience section-shell" id="experience">
+          <div className="section-heading reveal">
+            <div>
+              <p className="eyebrow">Professional journey</p>
+              <h2 className="section-title">Experience</h2>
             </div>
-            <div className="hero-stats reveal" aria-label="Career highlights">
-              <div><strong>8+</strong><span>Years delivering<br />enterprise software</span></div>
-              <div><strong>3</strong><span>Regulated<br />business domains</span></div>
-              <div><strong>21</strong><span>Modern Java<br />in production</span></div>
-            </div>
+            <p className="experience-intro">Building and supporting dependable fintech, healthcare, and banking products across the full application stack.</p>
           </div>
-          <div className="canvas-caption" aria-hidden="true"><span>Live system field</span><i /><span>Three.js · 60 FPS</span></div>
-          <div className="scroll-cue" aria-hidden="true"><span>Scroll to inspect</span><i /></div>
+          <div className="experience-list">
+            {experience.map((item, index) => (
+              <article className="experience-card reveal" key={item.company}>
+                <div className="experience-meta">
+                  <span className="experience-index">{String(index + 1).padStart(2, "0")}</span>
+                  <span className="timeline-date">{item.date}</span>
+                </div>
+                <div className="timeline-main"><h3>{item.role}</h3><p>{item.company}</p></div>
+                <div className="timeline-detail"><p>{item.detail}</p><span>{item.domain}</span></div>
+              </article>
+            ))}
+          </div>
         </section>
 
         <section className="manifesto section-shell" id="about">
@@ -164,13 +167,6 @@ export default function Portfolio() {
               <span>Security &amp; APIs</span>
               <span>Testing &amp; observability</span>
             </div>
-          </div>
-        </section>
-
-        <section className="experience section-shell" id="experience">
-          <div className="section-heading reveal"><h2 className="section-title">Experience</h2></div>
-          <div className="timeline">
-            {experience.map((item) => <article className="timeline-row reveal" key={item.company}><div className="timeline-date">{item.date}</div><div className="timeline-dot" /><div className="timeline-main"><h3>{item.role}</h3><p>{item.company}</p></div><div className="timeline-detail"><p>{item.detail}</p><span>{item.domain}</span></div></article>)}
           </div>
         </section>
 
