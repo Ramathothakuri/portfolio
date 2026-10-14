@@ -113,6 +113,7 @@ export default function Portfolio() {
           <span className="brand-copy">Ramakrishna T<small>Full Stack Developer</small></span>
         </a>
         <nav aria-label="Primary navigation">
+          <a href="#about" onClick={closeMenu}>About</a>
           <a href="#experience" onClick={closeMenu}>Experience</a>
           <a href="#stack" onClick={closeMenu}>Stack</a>
           <a className="nav-cta" href="#contact" onClick={closeMenu}>Let&apos;s talk <span>↗</span></a>
@@ -127,12 +128,13 @@ export default function Portfolio() {
           </div>
           <div className="hero-shade" aria-hidden="true" />
           <div className="hero-grid">
-            <div className="hero-kicker reveal"><span className="status-dot" />Senior full-stack engineer</div>
-            <h1 className="reveal"><span>About</span><span className="outline"><em>me.</em></span></h1>
+            <div className="hero-kicker reveal"><span className="status-dot" />Welcome · Senior Full Stack Developer</div>
+            <h1 className="welcome-title reveal"><span>Ramakrishna</span><span className="outline"><em>T.</em></span></h1>
             <div className="hero-bottom">
-              <p className="hero-intro reveal">Ramakrishna is a senior full-stack developer with 8+ years of experience building secure Java, Spring, React, and AWS systems for fintech, healthcare, and banking.</p>
+              <p className="hero-intro reveal">I build secure, reliable web applications across Java, Spring Boot, React, TypeScript, and AWS—turning complex business workflows into clear digital products.</p>
               <div className="hero-actions reveal">
-                <a className="button button-primary" href="#experience">View experience <span>↓</span></a>
+                <a className="button button-primary" href="#about">About me <span>↓</span></a>
+                <a className="button button-ghost" href="#experience">View experience <span>↘</span></a>
               </div>
             </div>
             <div className="hero-stats reveal" aria-label="Career highlights">
