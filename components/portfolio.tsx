@@ -147,10 +147,12 @@ export default function Portfolio() {
 
         <section className="manifesto section-shell" id="about">
           <div className="manifesto-copy">
-            <p className="eyebrow reveal">Profile</p>
+            <p className="eyebrow reveal">About me</p>
             <h2 className="reveal">Full-stack engineering for real-world systems.</h2>
             <div className="manifesto-columns reveal">
-              <p>With 8+ years across fintech, healthcare, and banking, Ramakrishna works across backend services, responsive interfaces, cloud platforms, data, messaging, security, testing, and production support.</p>
+              <p>I&apos;m Ramakrishna, a Full Stack Developer with 8+ years of experience turning complex business workflows into clear, reliable web applications. My core stack is Java, Spring Boot, React, and TypeScript, with experience across fintech, banking, and healthcare.</p>
+              <p>I build across the full application from accessible interfaces and secure APIs to database performance and AWS deployments. My work includes financial transaction platforms, payment systems, and healthcare integrations where accuracy, security, and reliability matter every day.</p>
+              <p>I take ownership from design through production, work closely with product and engineering teams, and mentor developers along the way. I focus on clean architecture, thoughtful user experiences, and software that performs under real world demands.</p>
             </div>
             <div className="profile-tags reveal" aria-label="Core capabilities">
               <span>Java &amp; Spring</span>

@@ -97,7 +97,7 @@ nav a:hover { color: var(--paper); background: rgba(255,255,255,.07); }
 .manifesto h2, .contact h2 { max-width: 1120px; margin: 1rem 0 3rem; font: 500 clamp(3rem,6.7vw,7rem)/.93 var(--display); letter-spacing: -.058em; }
 .manifesto h2 { max-width: 920px; margin-bottom: 2rem; font-size: clamp(3rem,5.8vw,6rem); }
 .manifesto .eyebrow { color: var(--cyan); }
-.manifesto-columns { max-width: 780px; color: #bcc7c3; font-size: 1.02rem; }
+.manifesto-columns { display: grid; gap: 1.05rem; max-width: 850px; color: #bcc7c3; font-size: 1.02rem; line-height: 1.72; }
 .manifesto-columns p { margin: 0; }
 .profile-tags { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 0 2rem; max-width: 1040px; margin-top: 2.6rem; border-bottom: 1px solid var(--line-light); }
 .profile-tags span { position: relative; padding: .95rem .25rem .95rem 1.2rem; border-top: 1px solid var(--line-light); color: #d1d9d6; background: transparent; font: 400 .64rem/1.35 var(--mono); letter-spacing: .02em; }
