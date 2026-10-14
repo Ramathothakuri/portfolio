@@ -130,10 +130,9 @@ export default function Portfolio() {
             <div className="hero-kicker reveal"><span className="status-dot" />Senior full-stack engineer · Charleston, SC</div>
             <h1 className="reveal"><span>Systems that</span><span className="outline"><em>hold up</em></span><span>in the real world.</span></h1>
             <div className="hero-bottom">
-              <p className="hero-intro reveal">I build secure, observable enterprise applications—from reactive Java services to accessible React workflows—across fintech, healthcare, and banking.</p>
+              <p className="hero-intro reveal">Ramakrishna is a senior full-stack developer with 8+ years of experience building secure Java, Spring, React, and AWS systems for fintech, healthcare, and banking.</p>
               <div className="hero-actions reveal">
                 <a className="button button-primary" href="#experience">View experience <span>↓</span></a>
-                <a className="button button-ghost" href="/Ramakrishna_T_Resume.docx" download>Download résumé <span>↘</span></a>
               </div>
             </div>
             <div className="hero-stats reveal" aria-label="Career highlights">
@@ -147,13 +146,11 @@ export default function Portfolio() {
         </section>
 
         <section className="manifesto section-shell" id="about">
-          <div className="section-label reveal"><span>01</span> Profile</div>
           <div className="manifesto-copy">
-            <p className="eyebrow reveal">Engineering from request to release</p>
-            <h2 className="reveal">I turn complicated operational needs into software people can trust.</h2>
+            <p className="eyebrow reveal">Profile</p>
+            <h2 className="reveal">Full-stack engineering for real-world systems.</h2>
             <div className="manifesto-columns reveal">
-              <p>My work spans technical design, API and data modeling, implementation, testing, release, and production support. I care equally about the workflow on screen and the system behavior beneath it.</p>
-              <p>That means secure boundaries, explicit failure states, reliable event processing, intentional data access, and observability that helps teams understand what the software is doing.</p>
+              <p>Ramakrishna builds backend services, responsive interfaces, cloud deployments, and reliable integrations—with a practical focus on software that stays clear and supportable in production.</p>
             </div>
           </div>
         </section>
@@ -212,7 +209,7 @@ export default function Portfolio() {
         </section>
       </main>
 
-      <footer><span>© {new Date().getFullYear()} Ramakrishna T</span><span>Designed around clarity, resilience &amp; motion.</span><div className="footer-links"><a href="https://github.com/Ramathothakuri" target="_blank" rel="noreferrer">GitHub ↗</a><a href="#top">Back to top ↑</a></div></footer>
+      <footer><span>© {new Date().getFullYear()} Ramakrishna T</span><span>Designed around clarity, resilience &amp; motion.</span><div className="footer-links"><a href="/Ramakrishna_T_Resume.docx" download>Download résumé ↓</a><a href="https://github.com/Ramathothakuri" target="_blank" rel="noreferrer">GitHub ↗</a><a href="#top">Back to top ↑</a></div></footer>
     </>
   );
 }
