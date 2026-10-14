@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { type WheelEvent, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import SystemField from "./system-field";
 
 const techColumns = [
@@ -98,12 +98,6 @@ export default function Portfolio() {
     };
   }, []);
 
-  const onBoardWheel = (event: WheelEvent<HTMLDivElement>) => {
-    if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
-    event.preventDefault();
-    event.currentTarget.scrollLeft += event.deltaY;
-  };
-
   const closeMenu = () => setMenuOpen(false);
 
   return (
@@ -172,12 +166,25 @@ export default function Portfolio() {
         </section>
 
         <section className="stack" id="stack">
-          <div className="section-shell"><div className="section-heading reveal"><div className="section-label"><span>03</span> Technology Kanban</div><div className="kanban-intro"><p>Every technology represented in the résumé, organized by where it contributes. The board is intentionally fixed—browse, don’t rearrange.</p></div></div></div>
-          <div className="kanban-wrap reveal">
-            <div className="kanban" id="kanban" aria-label="Technology kanban board" onWheel={onBoardWheel}>
-              {techColumns.map((column) => <section className="kanban-column" key={column.id}><header><span className="column-index">{column.id}</span><h3>{column.title}</h3><b>{column.items.length}</b></header><div className="kanban-list">{column.items.map((item) => <div className="tech-card" key={item}>{item}</div>)}</div></section>)}
+          <div className="section-shell">
+            <div className="stack-heading reveal">
+              <div className="section-label"><span>03</span> Capabilities</div>
+              <h2>Tech stack</h2>
             </div>
-            <p className="board-hint">Five fixed lanes · Scroll horizontally to inspect the full technology atlas</p>
+            <div className="stack-grid reveal" aria-label="Technology stack">
+              {techColumns.map((group) => (
+                <article className="stack-group" key={group.id}>
+                  <header>
+                    <span className="group-index">{group.id}</span>
+                    <h3>{group.title}</h3>
+                    <span className="group-count">{group.items.length}</span>
+                  </header>
+                  <div className="stack-list">
+                    {group.items.map((item) => <span className="tech-chip" key={item}>{item}</span>)}
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
