@@ -3,26 +3,64 @@
 import { useEffect, useRef, useState } from "react";
 import SystemField from "./system-field";
 
+const coreSkills = [
+  "Java 21 / 17",
+  "Spring Boot",
+  "Spring WebFlux",
+  "React",
+  "TypeScript",
+  "PostgreSQL",
+  "AWS",
+  "Docker & Kubernetes",
+];
+
 const techGroups = [
   {
-    title: "Languages & formats",
-    items: ["Java", "JavaScript", "TypeScript", "SQL", "HTML5", "CSS3", "JSON", "XML", "YAML", "OpenAPI"],
+    title: "Backend",
+    items: ["Spring MVC", "Spring Data", "JPA", "R2DBC", "Spring Security", "WebClient", "REST", "OpenAPI"],
   },
   {
-    title: "Application layer",
-    items: ["Spring Boot", "Spring WebFlux", "Spring MVC", "Spring Data JPA", "R2DBC", "Hibernate", "Spring Security", "WebClient", "REST APIs", "Microservices", "React", "Redux Toolkit", "React Query", "React Router", "Material UI", "Tailwind CSS"],
+    title: "Data & messaging",
+    items: ["AWS RDS", "Redis", "ElastiCache", "Amazon SQS", "Amazon SNS", "Kafka", "RabbitMQ", "FHIR R4", "HL7 v2"],
   },
   {
-    title: "Data & integration",
-    items: ["PostgreSQL", "MySQL", "AWS RDS", "Redis", "Amazon ElastiCache", "Amazon SQS", "Amazon SNS", "Apache Kafka", "RabbitMQ", "FHIR R4", "HL7 v2"],
+    title: "Cloud & delivery",
+    items: ["Amazon EKS", "Terraform", "Jenkins", "Git", "CloudWatch", "OAuth 2.0", "OpenID Connect", "JWT"],
   },
   {
-    title: "Cloud, security & delivery",
-    items: ["AWS EKS", "Amazon CloudWatch", "AWS IAM", "AWS Secrets Manager", "Docker", "Kubernetes", "Terraform", "OAuth 2.0", "OpenID Connect", "JWT", "Jenkins", "Git", "Bitbucket"],
+    title: "Quality & operations",
+    items: ["JUnit 5", "Mockito", "Testcontainers", "Jest", "React Testing Library", "Cypress", "Micrometer", "Splunk", "Prometheus", "Grafana"],
+  },
+];
+
+const caseStudies = [
+  {
+    domain: "Fintech · FIS",
+    title: "Transaction investigation and reconciliation",
+    summary: "One workspace for operations teams to search financial activity, review exceptions, reconcile records, and resolve cases.",
+    problem: "High-volume searches, several downstream services, and permission-sensitive actions made investigation work slow and difficult to trace.",
+    build: "Reactive Java 21 services with Spring Boot and WebFlux, paired with React screens for filters, drill-down details, bulk actions, and status history.",
+    decisions: [
+      "Used keyset pagination and targeted PostgreSQL indexes as result sets grew.",
+      "Added correlation IDs, idempotency keys, retries, and dead-letter queues to SQS and SNS flows.",
+      "Matched OAuth, OpenID Connect, and JWT roles across both APIs and the interface.",
+    ],
+    flow: ["Search", "Review exceptions", "Reconcile", "Resolve"],
+    tools: ["Java 21", "Spring WebFlux", "React 18", "PostgreSQL", "SQS / SNS", "Amazon EKS"],
   },
   {
-    title: "Quality & observability",
-    items: ["JUnit 5", "Mockito", "Spring Boot Test", "WebTestClient", "Testcontainers", "Jest", "React Testing Library", "Cypress", "Postman", "Micrometer", "Splunk", "Prometheus", "Grafana"],
+    domain: "Healthcare · Centene",
+    title: "Provider ordering and patient payments",
+    summary: "A full-stack module for provider staff to create and track PCIT orders while patients move through a guided payment flow.",
+    problem: "The workflow needed to fit an existing clinical portal, exchange FHIR and HL7 data, and coordinate payments without storing card data.",
+    build: "Java 17 and WebFlux APIs for orders, validation, pricing, status, and payments, with React and TypeScript pages for provider and patient workflows.",
+    decisions: [
+      "Mapped clinical data to FHIR R4 resources and validated HL7 ADT and ORM messages.",
+      "Kept the existing login and patient context through shared authentication and deep links.",
+      "Used tokenized payment references, PostgreSQL transactions, and idempotent queue consumers.",
+    ],
+    flow: ["Create order", "Validate data", "Take payment", "Track status"],
+    tools: ["Java 17", "Spring Boot", "React", "FHIR R4", "HL7 v2", "PostgreSQL"],
   },
 ];
 
@@ -31,30 +69,42 @@ const experience = [
     date: "2024 — Present",
     role: "Senior Full Stack Developer",
     company: "FIS · Charleston, South Carolina",
-    detail: "Building transaction and investigation tools with distributed processing, secure integrations, and AWS.",
     domain: "Fintech",
+    contributions: [
+      "Turn broad operations requests into transaction search, exception review, reconciliation, and case-management workflows.",
+      "Build WebFlux APIs with controlled retries and React screens with filters, drill-down details, bulk actions, and permission-aware controls.",
+      "Tune PostgreSQL searches with targeted indexes and keyset pagination; design SQS and SNS flows for safe replay and recovery.",
+    ],
   },
   {
     date: "2022 — 2024",
     role: "Full Stack Developer",
     company: "Centene Corporation · Clayton, Missouri",
-    detail: "Built healthcare ordering and payment workflows using FHIR R4 and HL7, with careful handling of protected data.",
     domain: "Healthcare",
+    contributions: [
+      "Integrated provider ordering and patient payments into an existing clinical portal with shared authentication and patient context.",
+      "Built Java 17 APIs and accessible React forms for order creation, validation, payment, receipts, and status history.",
+      "Mapped FHIR R4 resources, processed HL7 updates, and used tokenized payments with transactional audit data in PostgreSQL.",
+    ],
   },
   {
     date: "2018 — 2021",
     role: "Java Full Stack Developer",
     company: "Coforge · Hyderabad, India",
-    detail: "Worked on banking systems for customer service, payments, and enterprise integrations.",
     domain: "Banking",
+    contributions: [
+      "Moved account servicing and payment capabilities into Java and React modules while legacy platforms stayed operational.",
+      "Built Spring services, reusable TypeScript interfaces, and adapters that normalized inconsistent legacy data into stable REST contracts.",
+      "Improved SQL and pagination, added Redis caching, and handled payment events with Kafka and RabbitMQ retry paths.",
+    ],
   },
 ];
 
 const sectionLinks = [
   ["Intro", "#top"],
+  ["Work", "#work"],
   ["Experience", "#experience"],
   ["Stack", "#stack"],
-  ["Education", "#education"],
 ] as const;
 
 export default function Portfolio() {
@@ -129,20 +179,45 @@ export default function Portfolio() {
       <main id="main">
         <section className="hero section-shell" id="top">
           <div className="hero-copy">
-            <h1 className="reveal">Hello, I&apos;m Ramakrishna.<br /><em>I build full-stack applications.</em></h1>
+            <h1 className="reveal">Hello, I&apos;m Ramakrishna.<br /><em>Full-stack developer.</em></h1>
             <div className="hero-intro reveal">
-              <p>Java and Spring Boot are at the center of my backend work. On the front end, I use React and TypeScript to build clear, accessible interfaces.</p>
-              <p>Over the past eight years, I&apos;ve worked on transaction systems in fintech, ordering and payment workflows in healthcare, and customer service platforms in banking.</p>
-              <p>I stay involved from the first design discussion through production support—writing APIs, tuning database queries, deploying to AWS, reviewing code, and helping other developers.</p>
+              <p>I build Java and React applications for fintech, healthcare, and banking. My work covers secure APIs, accessible interfaces, data, and AWS delivery.</p>
+              <p>For more than eight years, I&apos;ve taken features from early requirements through release and production support.</p>
             </div>
             <div className="hero-actions reveal">
-              <a className="paper-button paper-button-dark" href="#experience">Explore experience <span>↓</span></a>
-              <a className="paper-button" href="#contact">Start a conversation <span>↗</span></a>
+              <a className="paper-button paper-button-dark" href="#work">View selected work <span>↓</span></a>
+              <a className="paper-button resume-button" href="/Ramakrishna_T_Resume.docx" download>Download résumé <span>↓</span></a>
             </div>
           </div>
 
           <div className="hero-art reveal" id="sculpture" aria-label="Animated folded-paper sculpture">
             <SystemField />
+          </div>
+        </section>
+
+        <section className="work section-shell" id="work">
+          <div className="section-heading reveal">
+            <h2>Selected work</h2>
+          </div>
+          <div className="case-study-list">
+            {caseStudies.map((study) => (
+              <article className="case-study reveal" key={study.title}>
+                <header>
+                  <p>{study.domain}</p>
+                  <h3>{study.title}</h3>
+                  <strong>{study.summary}</strong>
+                </header>
+                <div className="case-study-body">
+                  <div><span>Problem</span><p>{study.problem}</p></div>
+                  <div><span>What I built</span><p>{study.build}</p></div>
+                  <div><span>Technical decisions</span><ul>{study.decisions.map((decision) => <li key={decision}>{decision}</li>)}</ul></div>
+                </div>
+                <div className="case-flow" aria-label={`${study.title} workflow`}>
+                  {study.flow.map((step) => <span key={step}>{step}</span>)}
+                </div>
+                <div className="case-tools">{study.tools.map((tool) => <span key={tool}>{tool}</span>)}</div>
+              </article>
+            ))}
           </div>
         </section>
 
@@ -153,9 +228,14 @@ export default function Portfolio() {
           <div className="experience-list">
             {experience.map((item) => (
               <article className="experience-entry reveal" key={item.company}>
-                <div className="entry-date">{item.date}</div>
-                <div className="entry-role"><h3>{item.role}</h3><p>{item.company}</p></div>
-                <div className="entry-detail"><p>{item.detail}</p><span>{item.domain}</span></div>
+                <header className="experience-lead">
+                  <div className="entry-date">{item.date}</div>
+                  <div className="entry-role"><h3>{item.role}</h3><p>{item.company}</p></div>
+                  <span className="entry-domain">{item.domain}</span>
+                </header>
+                <ul className="entry-contributions">
+                  {item.contributions.map((contribution) => <li key={contribution}>{contribution}</li>)}
+                </ul>
               </article>
             ))}
           </div>
@@ -164,6 +244,10 @@ export default function Portfolio() {
         <section className="stack section-shell" id="stack">
           <div className="section-heading reveal">
             <h2>Tech stack</h2>
+          </div>
+          <div className="core-skills reveal" aria-label="Core skills">
+            <p>Core skills</p>
+            <div>{coreSkills.map((skill) => <span key={skill}>{skill}</span>)}</div>
           </div>
           <div className="stack-grid" aria-label="Technology stack">
             {techGroups.map((group) => (
