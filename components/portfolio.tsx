@@ -33,37 +33,6 @@ const techGroups = [
   },
 ];
 
-const caseStudies = [
-  {
-    domain: "Fintech · FIS",
-    title: "Transaction investigation and reconciliation",
-    summary: "One workspace for operations teams to search financial activity, review exceptions, reconcile records, and resolve cases.",
-    problem: "High-volume searches, several downstream services, and permission-sensitive actions made investigation work slow and difficult to trace.",
-    build: "Reactive Java 21 services with Spring Boot and WebFlux, paired with React screens for filters, drill-down details, bulk actions, and status history.",
-    decisions: [
-      "Used keyset pagination and targeted PostgreSQL indexes as result sets grew.",
-      "Added correlation IDs, idempotency keys, retries, and dead-letter queues to SQS and SNS flows.",
-      "Matched OAuth, OpenID Connect, and JWT roles across both APIs and the interface.",
-    ],
-    flow: ["Search", "Review exceptions", "Reconcile", "Resolve"],
-    tools: ["Java 21", "Spring WebFlux", "React 18", "PostgreSQL", "SQS / SNS", "Amazon EKS"],
-  },
-  {
-    domain: "Healthcare · Centene",
-    title: "Provider ordering and patient payments",
-    summary: "A full-stack module for provider staff to create and track PCIT orders while patients move through a guided payment flow.",
-    problem: "The workflow needed to fit an existing clinical portal, exchange FHIR and HL7 data, and coordinate payments without storing card data.",
-    build: "Java 17 and WebFlux APIs for orders, validation, pricing, status, and payments, with React and TypeScript pages for provider and patient workflows.",
-    decisions: [
-      "Mapped clinical data to FHIR R4 resources and validated HL7 ADT and ORM messages.",
-      "Kept the existing login and patient context through shared authentication and deep links.",
-      "Used tokenized payment references, PostgreSQL transactions, and idempotent queue consumers.",
-    ],
-    flow: ["Create order", "Validate data", "Take payment", "Track status"],
-    tools: ["Java 17", "Spring Boot", "React", "FHIR R4", "HL7 v2", "PostgreSQL"],
-  },
-];
-
 const experience = [
   {
     date: "2024 — Present",
@@ -99,7 +68,6 @@ const experience = [
 
 const sectionLinks = [
   ["Intro", "#top"],
-  ["Work", "#work"],
   ["Experience", "#experience"],
   ["Stack", "#stack"],
 ] as const;
@@ -178,45 +146,21 @@ export default function Portfolio() {
           <div className="hero-copy">
             <h1 className="reveal">Hello, I&apos;m Ramakrishna.<br /><em>Full-stack developer.</em></h1>
             <div className="hero-intro reveal">
-              <p>I&apos;m Ramakrishna, a Full Stack Developer with 8+ years of experience building software for fintech, banking, and healthcare. I connect the pieces that make an application work from React and TypeScript interfaces to Java services, databases, and cloud infrastructure.</p>
-              <p>I enjoy making complicated workflows easier to use and systems easier to maintain.</p>
-              <p>My work starts with understanding the problem and continues through design, development, and production support. Along the way, I collaborate closely with product teams, review technical decisions, and mentor developers.</p>
-              <p>I care about the details: clear interfaces, secure APIs, reliable processing, and code the next developer can understand.</p>
+              <p className="intro-lead">I&apos;m Ramakrishna, a Full Stack Developer with 8+ years of experience building software for fintech, banking, and healthcare. I connect the pieces that make an application work from React and TypeScript interfaces to Java services, databases, and cloud infrastructure.</p>
+              <div className="intro-support">
+                <p>I enjoy making complicated workflows easier to use and systems easier to maintain.</p>
+                <p>My work starts with understanding the problem and continues through design, development, and production support. Along the way, I collaborate closely with product teams, review technical decisions, and mentor developers.</p>
+                <p>I care about the details: clear interfaces, secure APIs, reliable processing, and code the next developer can understand.</p>
+              </div>
             </div>
             <div className="hero-actions reveal">
-              <a className="paper-button paper-button-dark" href="#work">View selected work <span>↓</span></a>
+              <a className="paper-button paper-button-dark" href="#experience">View experience <span>↓</span></a>
               <a className="paper-button resume-button" href="/Ramakrishna_T_Resume.docx" download>Download résumé <span>↓</span></a>
             </div>
           </div>
 
           <div className="hero-art reveal" id="sculpture" aria-label="Animated folded-paper sculpture">
             <SystemField />
-          </div>
-        </section>
-
-        <section className="work section-shell" id="work">
-          <div className="section-heading reveal">
-            <h2>Selected work</h2>
-          </div>
-          <div className="case-study-list">
-            {caseStudies.map((study) => (
-              <article className="case-study reveal" key={study.title}>
-                <header>
-                  <p>{study.domain}</p>
-                  <h3>{study.title}</h3>
-                  <strong>{study.summary}</strong>
-                </header>
-                <div className="case-study-body">
-                  <div><span>Problem</span><p>{study.problem}</p></div>
-                  <div><span>What I built</span><p>{study.build}</p></div>
-                  <div><span>Technical decisions</span><ul>{study.decisions.map((decision) => <li key={decision}>{decision}</li>)}</ul></div>
-                </div>
-                <div className="case-flow" aria-label={`${study.title} workflow`}>
-                  {study.flow.map((step) => <span key={step}>{step}</span>)}
-                </div>
-                <div className="case-tools">{study.tools.map((tool) => <span key={tool}>{tool}</span>)}</div>
-              </article>
-            ))}
           </div>
         </section>
 
