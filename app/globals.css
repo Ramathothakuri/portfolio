@@ -79,14 +79,10 @@ nav .nav-contact span { margin-left: .75rem; color: var(--red); }
 .hero-art::before { left: -1.5rem; top: 2.8rem; transform: rotate(-35deg); }
 .hero-art::after { right: -1.2rem; bottom: 4rem; background: rgba(36,87,166,.72); transform: rotate(-28deg); }
 .paper-sculpture { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-.art-stamp { position: absolute; z-index: 3; top: 1.5rem; right: 1.6rem; padding: .42rem .65rem; border: 1px solid var(--blue); color: var(--blue); font: 500 .56rem var(--mono); text-transform: uppercase; transform: rotate(2deg); }
-.art-caption { position: absolute; z-index: 3; left: 1.6rem; bottom: 1.5rem; max-width: 13rem; font: 500 .56rem/1.4 var(--mono); text-transform: uppercase; letter-spacing: .07em; }
-.hero-folio { position: absolute; left: var(--pad); right: var(--pad); bottom: 1.4rem; display: flex; justify-content: space-between; color: var(--ink-muted); font: 400 .54rem var(--mono); text-transform: uppercase; letter-spacing: .11em; }
 
-.section-heading { display: grid; grid-template-columns: minmax(0,1fr) minmax(250px,380px); gap: 2rem; align-items: end; padding: 1.15rem 0 clamp(2.2rem,3.5vw,3.5rem); border-top: 2px solid var(--ink); }
+.section-heading { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: end; padding: 1.15rem 0 clamp(2.2rem,3.5vw,3.5rem); border-top: 2px solid var(--ink); }
 .eyebrow { margin: 0 0 .55rem; color: var(--blue); font: 500 .62rem var(--mono); text-transform: uppercase; letter-spacing: .1em; }
 .section-heading h2 { margin: 0; font: 400 clamp(3.8rem,7vw,7.4rem)/.82 var(--serif); letter-spacing: -.045em; }
-.section-intro { margin: 0; color: var(--ink-muted); font-size: 1rem; line-height: 1.65; }
 
 .experience { padding-top: clamp(4.5rem,6vw,6.5rem); padding-bottom: clamp(5rem,7vw,7rem); }
 .experience-list { border-bottom: 1px solid var(--rule-strong); }
@@ -149,7 +145,6 @@ footer a { color: var(--paper-light); }
 @media (max-width: 1080px) {
   .hero { grid-template-columns: minmax(0,1fr) minmax(330px,.8fr); }
   .hero h1 { font-size: clamp(4rem,7vw,6.4rem); }
-  .section-heading { grid-template-columns: minmax(0,1fr) minmax(230px,320px); }
   .experience-entry { grid-template-columns: 7.5rem 1fr; }
   .entry-detail { grid-column: 2; }
   .stack-card:nth-child(n) { grid-column: span 6; }
@@ -172,9 +167,7 @@ footer a { color: var(--paper-light); }
   .hero-intro { grid-template-columns: 1fr; }
   .hero-intro p:first-child { grid-column: 1; }
   .hero-art { order: 2; min-height: min(70vh,580px); }
-  .hero-folio { display: none; }
   .section-heading,.education .section-heading { grid-template-columns: 1fr; gap: .8rem; }
-  .section-heading .section-intro { grid-column: 1; }
   .section-heading h2 { font-size: clamp(3.7rem,16vw,6rem); }
   .experience-entry { grid-template-columns: 1fr; gap: .7rem; }
   .entry-date,.entry-role,.entry-detail { grid-column: 1; }
@@ -192,7 +185,6 @@ footer a { color: var(--paper-light); }
 @media (max-width: 480px) {
   .hero-actions,.paper-button { width: 100%; }
   .hero-art { min-height: 500px; }
-  .art-caption { max-width: 10rem; }
   .degree { grid-template-columns: 1fr; }
   .degree strong { grid-column: 1; }
   .contact-email span { margin-left: 1.5rem; }
