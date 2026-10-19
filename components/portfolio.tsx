@@ -134,11 +134,11 @@ export default function Portfolio() {
       <main id="main">
         <section className="hero section-shell" id="top">
           <div className="hero-copy">
-            <p className="welcome-note reveal"><span>Hello</span> Welcome to my portfolio.</p>
             <h1 className="reveal">I&apos;m Ramakrishna,<br /><em>a full-stack developer.</em></h1>
             <div className="hero-intro reveal">
-              <p>I turn complex business workflows into clear, reliable web applications. My core stack is Java, Spring Boot, React, and TypeScript, with experience across fintech, banking, and healthcare.</p>
-              <p>I work across accessible interfaces, secure APIs, database performance, and AWS delivery—taking products from design through production.</p>
+              <p>I&apos;m a Full Stack Developer with 8+ years of experience turning complex business workflows into clear, reliable web applications. My core stack is Java, Spring Boot, React, and TypeScript, with experience across fintech, banking, and healthcare.</p>
+              <p>I build across the full application—from accessible interfaces and secure APIs to database performance and AWS deployments. My work includes financial transaction platforms, payment systems, and healthcare integrations where accuracy, security, and reliability matter every day.</p>
+              <p>I take ownership from design through production, work closely with product and engineering teams, and mentor developers along the way. I focus on clean architecture, thoughtful user experiences, and software that performs under real-world demands.</p>
             </div>
             <div className="hero-actions reveal">
               <a className="paper-button paper-button-dark" href="#experience">Explore experience <span>↓</span></a>
@@ -157,14 +157,12 @@ export default function Portfolio() {
 
         <section className="experience section-shell" id="experience">
           <div className="section-heading reveal">
-            <p className="section-number">01</p>
             <div><p className="eyebrow">Professional journey</p><h2>Experience</h2></div>
             <p className="section-intro">Enterprise products built for accuracy, security, and reliability across regulated industries.</p>
           </div>
           <div className="experience-list">
-            {experience.map((item, index) => (
+            {experience.map((item) => (
               <article className="experience-entry reveal" key={item.company}>
-                <div className="entry-index">{String(index + 1).padStart(2, "0")}</div>
                 <div className="entry-date">{item.date}</div>
                 <div className="entry-role"><h3>{item.role}</h3><p>{item.company}</p></div>
                 <div className="entry-detail"><p>{item.detail}</p><span>{item.domain}</span></div>
@@ -175,14 +173,13 @@ export default function Portfolio() {
 
         <section className="stack section-shell" id="stack">
           <div className="section-heading reveal">
-            <p className="section-number">02</p>
             <div><p className="eyebrow">Tools of the trade</p><h2>Tech stack</h2></div>
             <p className="section-intro">A practical toolkit spanning product interfaces, distributed services, data, cloud delivery, security, and quality.</p>
           </div>
           <div className="stack-grid" aria-label="Technology stack">
             {techGroups.map((group) => (
               <article className="stack-card reveal" key={group.id}>
-                <header><span>{group.id}</span><h3>{group.title}</h3><small>{group.items.length} tools</small></header>
+                <header><h3>{group.title}</h3><small>{group.items.length} tools</small></header>
                 <div className="tech-list">{group.items.map((item) => <span key={item}>{item}</span>)}</div>
               </article>
             ))}
@@ -191,7 +188,6 @@ export default function Portfolio() {
 
         <section className="education section-shell" id="education">
           <div className="section-heading reveal">
-            <p className="section-number">03</p>
             <div><p className="eyebrow">Academic foundation</p><h2>Education</h2></div>
           </div>
           <div className="education-grid">
@@ -202,7 +198,6 @@ export default function Portfolio() {
 
         <section className="contact" id="contact">
           <div className="contact-inner section-shell">
-            <p className="section-number reveal">04</p>
             <p className="eyebrow reveal">Contact</p>
             <h2 className="reveal">Have a role or project in mind?<br /><em>Let&apos;s make it real.</em></h2>
             <div className="contact-actions reveal">
