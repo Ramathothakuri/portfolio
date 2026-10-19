@@ -129,11 +129,11 @@ export default function Portfolio() {
       <main id="main">
         <section className="hero section-shell" id="top">
           <div className="hero-copy">
-            <h1 className="reveal">I&apos;m Ramakrishna,<br /><em>a full-stack developer.</em></h1>
+            <h1 className="reveal">Hello, I&apos;m Ramakrishna.<br /><em>I build full-stack applications.</em></h1>
             <div className="hero-intro reveal">
-              <p>I&apos;ve spent more than eight years building software for fintech, banking, and healthcare. I mostly work with Java, Spring Boot, React, and TypeScript.</p>
-              <p>My work covers interfaces, APIs, databases, and AWS deployments.</p>
-              <p>I like straightforward code, practical decisions, and staying involved after a product goes live.</p>
+              <p>Java and Spring Boot are at the center of my backend work. On the front end, I use React and TypeScript to build clear, accessible interfaces.</p>
+              <p>Over the past eight years, I&apos;ve worked on transaction systems in fintech, ordering and payment workflows in healthcare, and customer service platforms in banking.</p>
+              <p>I stay involved from the first design discussion through production support—writing APIs, tuning database queries, deploying to AWS, reviewing code, and helping other developers.</p>
             </div>
             <div className="hero-actions reveal">
               <a className="paper-button paper-button-dark" href="#experience">Explore experience <span>↓</span></a>
