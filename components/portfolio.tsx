@@ -56,7 +56,7 @@ const experience = [
   },
   {
     date: "2018 — 2021",
-    role: "Java Full Stack Developer",
+    role: "Full Stack Developer",
     company: "Coforge · Hyderabad, India",
     contributions: [
       "Moved account servicing and payment capabilities into Java and React modules while legacy platforms stayed operational.",
@@ -218,7 +218,7 @@ export default function Portfolio() {
             <div className="contact-actions reveal">
               <a className="contact-email" href="mailto:rthothakuri@gmail.com">rthothakuri@gmail.com <span>↗</span></a>
               <a href="tel:+19453331677">+1 945 333 1677</a>
-              <a href="https://www.linkedin.com/search/results/people/?keywords=Ramakrishna%20T%20Full%20Stack%20Developer%20FIS" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
+              <a href="https://www.linkedin.com/in/ramakrishna-t-310b99326" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
               <a href="https://github.com/Ramathothakuri" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
             </div>
           </div>
