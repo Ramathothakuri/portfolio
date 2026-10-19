@@ -16,10 +16,9 @@ export const metadata: Metadata = {
   alternates: { canonical: siteUrl },
   openGraph: {
     title: "Ramakrishna T — Full Stack Developer",
-    description: "Eight years of engineering secure, scalable enterprise systems.",
+    description: "Full-stack engineering across Java, Spring Boot, React, TypeScript, and AWS.",
     url: siteUrl,
     siteName: "Ramakrishna T Portfolio",
-    images: [{ url: "/assets/systems-architecture-v2.webp", width: 3840, height: 1645 }],
     type: "website",
   },
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
@@ -29,7 +28,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <head>
-        <meta name="theme-color" content="#080b0c" />
+        <meta name="theme-color" content="#eee8d8" />
       </head>
       <body>{children}</body>
     </html>
