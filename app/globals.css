@@ -110,12 +110,11 @@ nav .nav-contact span { margin-left: .75rem; color: var(--red); }
 .experience-entry::before { content: ""; position: absolute; z-index: -1; inset: .45rem -.7rem; background: var(--paper-light); opacity: 0; transform: rotate(-.25deg); transition: opacity .3s; }
 .experience-entry:hover::before { opacity: .75; }
 .experience-entry:hover { transform: translateX(.35rem); }
-.experience-lead { display: grid; grid-template-columns: 1fr auto; gap: .7rem 1rem; align-items: start; }
+.experience-lead { display: grid; gap: .7rem; align-items: start; }
 .entry-date { color: var(--red); font: 500 .62rem var(--mono); text-transform: uppercase; letter-spacing: .045em; }
 .entry-role { grid-column: 1/-1; }
 .entry-role h3 { margin: 0; font: 400 clamp(1.8rem,2.8vw,3rem)/.98 var(--serif); letter-spacing: -.025em; }
 .entry-role p { margin: .65rem 0 0; color: var(--ink-muted); font-size: .85rem; }
-.entry-domain { grid-column: 2; grid-row: 1; justify-self: end; padding: .28rem .52rem; border: 1px solid var(--ink); font: 500 .55rem var(--mono); text-transform: uppercase; transform: rotate(-1deg); }
 .entry-contributions { margin: 0; padding: 0; list-style: none; }
 .entry-contributions li { position: relative; padding: 0 0 .8rem 1.25rem; color: var(--ink-muted); font-size: .9rem; line-height: 1.55; }
 .entry-contributions li::before { content: "—"; position: absolute; left: 0; color: var(--blue); }
@@ -162,7 +161,7 @@ nav .nav-contact span { margin-left: .75rem; color: var(--red); }
 .contact-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem 1.6rem; padding-top: 1.5rem; border-top: 1px solid rgba(247,242,231,.32); font: 500 .65rem var(--mono); }
 .contact-actions a { padding: .65rem 0; border-bottom: 1px solid rgba(247,242,231,.38); }
 .contact-actions a:hover { color: #a9c9ff; }
-.contact-actions .contact-email { margin-right: auto; padding: 1rem 1.2rem; border: 1px solid var(--paper-light); background: var(--paper-light); color: var(--ink); font-size: clamp(.78rem,1.2vw,1rem); box-shadow: 5px 5px 0 rgba(169,201,255,.32); }
+.contact-actions .contact-email { margin-right: auto; padding: .85rem 1rem; border: 1px solid var(--paper-light); background: var(--paper-light); color: var(--ink); }
 .contact-email span { margin-left: 3rem; color: var(--red); }
 
 footer { display: flex; justify-content: space-between; gap: 1.5rem; padding: 1.5rem var(--pad); border-top: 1px solid rgba(247,242,231,.2); color: #bdb6a8; background: var(--ink); font: 400 .55rem var(--mono); }
@@ -208,7 +207,7 @@ footer a { color: var(--paper-light); }
   .contact { clip-path: polygon(0 1.5%,12% .5%,28% 1.7%,48% .4%,68% 1.5%,84% .4%,100% 1.6%,100% 100%,0 100%); }
   .contact h2 { font-size: clamp(3.4rem,13vw,5.4rem); }
   .contact-actions { flex-direction: column; align-items: flex-start; }
-  .contact-actions .contact-email { width: 100%; margin-right: 0; }
+  .contact-actions .contact-email { margin-right: 0; }
   footer { flex-direction: column; }
 }
 

@@ -69,7 +69,6 @@ const experience = [
     date: "2024 — Present",
     role: "Senior Full Stack Developer",
     company: "FIS · Charleston, South Carolina",
-    domain: "Fintech",
     contributions: [
       "Turn broad operations requests into transaction search, exception review, reconciliation, and case-management workflows.",
       "Build WebFlux APIs with controlled retries and React screens with filters, drill-down details, bulk actions, and permission-aware controls.",
@@ -80,7 +79,6 @@ const experience = [
     date: "2022 — 2024",
     role: "Full Stack Developer",
     company: "Centene Corporation · Clayton, Missouri",
-    domain: "Healthcare",
     contributions: [
       "Integrated provider ordering and patient payments into an existing clinical portal with shared authentication and patient context.",
       "Built Java 17 APIs and accessible React forms for order creation, validation, payment, receipts, and status history.",
@@ -91,7 +89,6 @@ const experience = [
     date: "2018 — 2021",
     role: "Java Full Stack Developer",
     company: "Coforge · Hyderabad, India",
-    domain: "Banking",
     contributions: [
       "Moved account servicing and payment capabilities into Java and React modules while legacy platforms stayed operational.",
       "Built Spring services, reusable TypeScript interfaces, and adapters that normalized inconsistent legacy data into stable REST contracts.",
@@ -181,8 +178,10 @@ export default function Portfolio() {
           <div className="hero-copy">
             <h1 className="reveal">Hello, I&apos;m Ramakrishna.<br /><em>Full-stack developer.</em></h1>
             <div className="hero-intro reveal">
-              <p>I build Java and React applications for fintech, healthcare, and banking. My work covers secure APIs, accessible interfaces, data, and AWS delivery.</p>
-              <p>For more than eight years, I&apos;ve taken features from early requirements through release and production support.</p>
+              <p>I&apos;m Ramakrishna, a Full Stack Developer with 8+ years of experience building software for fintech, banking, and healthcare. I connect the pieces that make an application work from React and TypeScript interfaces to Java services, databases, and cloud infrastructure.</p>
+              <p>I enjoy making complicated workflows easier to use and systems easier to maintain.</p>
+              <p>My work starts with understanding the problem and continues through design, development, and production support. Along the way, I collaborate closely with product teams, review technical decisions, and mentor developers.</p>
+              <p>I care about the details: clear interfaces, secure APIs, reliable processing, and code the next developer can understand.</p>
             </div>
             <div className="hero-actions reveal">
               <a className="paper-button paper-button-dark" href="#work">View selected work <span>↓</span></a>
@@ -231,7 +230,6 @@ export default function Portfolio() {
                 <header className="experience-lead">
                   <div className="entry-date">{item.date}</div>
                   <div className="entry-role"><h3>{item.role}</h3><p>{item.company}</p></div>
-                  <span className="entry-domain">{item.domain}</span>
                 </header>
                 <ul className="entry-contributions">
                   {item.contributions.map((contribution) => <li key={contribution}>{contribution}</li>)}
