@@ -5,29 +5,24 @@ import SystemField from "./system-field";
 
 const techGroups = [
   {
-    id: "01",
     title: "Languages & formats",
-    items: ["Java 21 / 17 / 11 / 8", "JavaScript", "TypeScript", "SQL", "HTML5", "CSS3", "JSON", "XML", "YAML", "OpenAPI"],
+    items: ["Java", "JavaScript", "TypeScript", "SQL", "HTML5", "CSS3", "JSON", "XML", "YAML", "OpenAPI"],
   },
   {
-    id: "02",
     title: "Application layer",
-    items: ["Spring Boot", "Spring WebFlux", "Spring MVC", "Spring Data JPA / R2DBC", "Hibernate", "Spring Security", "WebClient", "REST APIs", "Microservices", "React / React 18", "Redux / Redux Toolkit", "React Query", "React Router", "React Hooks", "Material UI", "Tailwind CSS", "Accessible forms", "Responsive UI"],
+    items: ["Spring Boot", "Spring WebFlux", "Spring MVC", "Spring Data JPA", "R2DBC", "Hibernate", "Spring Security", "WebClient", "REST APIs", "Microservices", "React", "Redux Toolkit", "React Query", "React Router", "Material UI", "Tailwind CSS"],
   },
   {
-    id: "03",
     title: "Data & integration",
-    items: ["PostgreSQL", "MySQL", "AWS RDS", "Redis", "Amazon ElastiCache", "Amazon SQS", "Amazon SNS", "Kafka", "RabbitMQ", "FHIR R4", "HL7 v2", "FHIR Bundles", "Patient", "Practitioner", "ServiceRequest", "Coverage", "Organization", "ADT / ORM workflows", "Indexing & query tuning", "Caching"],
+    items: ["PostgreSQL", "MySQL", "AWS RDS", "Redis", "Amazon ElastiCache", "Amazon SQS", "Amazon SNS", "Apache Kafka", "RabbitMQ", "FHIR R4", "HL7 v2"],
   },
   {
-    id: "04",
     title: "Cloud, security & delivery",
-    items: ["AWS EKS", "CloudWatch", "AWS IAM", "Secrets Manager", "Docker", "Kubernetes", "Terraform", "OAuth 2.0", "OpenID Connect", "JWT", "CI / CD", "Jenkins", "Git", "Bitbucket", "Jira", "Confluence", "Secure SDLC"],
+    items: ["AWS EKS", "Amazon CloudWatch", "AWS IAM", "AWS Secrets Manager", "Docker", "Kubernetes", "Terraform", "OAuth 2.0", "OpenID Connect", "JWT", "Jenkins", "Git", "Bitbucket"],
   },
   {
-    id: "05",
     title: "Quality & observability",
-    items: ["JUnit 5", "Mockito", "Spring Boot Test", "WebTestClient", "Testcontainers", "Jest", "React Testing Library", "Cypress", "Postman", "Micrometer", "Splunk", "Prometheus", "Grafana", "Structured logging", "Metrics & tracing", "Health probes"],
+    items: ["JUnit 5", "Mockito", "Spring Boot Test", "WebTestClient", "Testcontainers", "Jest", "React Testing Library", "Cypress", "Postman", "Micrometer", "Splunk", "Prometheus", "Grafana"],
   },
 ];
 
@@ -36,21 +31,21 @@ const experience = [
     date: "2024 — Present",
     role: "Senior Full Stack Developer",
     company: "FIS · Charleston, South Carolina",
-    detail: "Building transaction operations and investigation workflows with distributed processing, secure integrations, and cloud-native delivery.",
+    detail: "Building transaction and investigation tools with distributed processing, secure integrations, and AWS.",
     domain: "Fintech",
   },
   {
     date: "2022 — 2024",
     role: "Full Stack Developer",
     company: "Centene Corporation · Clayton, Missouri",
-    detail: "Delivered healthcare ordering and payment experiences with FHIR R4, HL7 integrations, and protected-data workflows.",
+    detail: "Built healthcare ordering and payment workflows using FHIR R4 and HL7, with careful handling of protected data.",
     domain: "Healthcare",
   },
   {
     date: "2018 — 2021",
     role: "Java Full Stack Developer",
     company: "Coforge · Hyderabad, India",
-    detail: "Modernized banking systems across customer servicing, payment flows, and integrations with established enterprise platforms.",
+    detail: "Worked on banking systems for customer service, payments, and enterprise integrations.",
     domain: "Banking",
   },
 ];
@@ -136,9 +131,9 @@ export default function Portfolio() {
           <div className="hero-copy">
             <h1 className="reveal">I&apos;m Ramakrishna,<br /><em>a full-stack developer.</em></h1>
             <div className="hero-intro reveal">
-              <p>I build web applications with Java, Spring Boot, React, and TypeScript. Over the past 8+ years, I&apos;ve worked on fintech, banking, and healthcare systems.</p>
-              <p>I work across the full stack: clear interfaces, secure APIs, database performance, and AWS delivery.</p>
-              <p>I take projects from design to production, solve problems directly, and help teams ship dependable software.</p>
+              <p>I&apos;ve spent more than eight years building software for fintech, banking, and healthcare. I mostly work with Java, Spring Boot, React, and TypeScript.</p>
+              <p>My work covers interfaces, APIs, databases, and AWS deployments.</p>
+              <p>I like straightforward code, practical decisions, and staying involved after a product goes live.</p>
             </div>
             <div className="hero-actions reveal">
               <a className="paper-button paper-button-dark" href="#experience">Explore experience <span>↓</span></a>
@@ -172,8 +167,8 @@ export default function Portfolio() {
           </div>
           <div className="stack-grid" aria-label="Technology stack">
             {techGroups.map((group) => (
-              <article className="stack-card reveal" key={group.id}>
-                <header><h3>{group.title}</h3><small>{group.items.length} tools</small></header>
+              <article className="stack-card reveal" key={group.title}>
+                <header><h3>{group.title}</h3></header>
                 <div className="tech-list">{group.items.map((item) => <span key={item}>{item}</span>)}</div>
               </article>
             ))}
@@ -182,7 +177,7 @@ export default function Portfolio() {
 
         <section className="education section-shell" id="education">
           <div className="section-heading reveal">
-            <div><p className="eyebrow">Academic foundation</p><h2>Education</h2></div>
+            <h2>Education</h2>
           </div>
           <div className="education-grid">
             <article className="degree degree-primary reveal"><div className="degree-mark">M</div><div><span>Master&apos;s degree</span><h3>Computer Science</h3><p>Campbellsville University · Kentucky, USA</p></div><strong>GPA 3.9 / 4.0</strong></article>
@@ -193,7 +188,7 @@ export default function Portfolio() {
         <section className="contact" id="contact">
           <div className="contact-inner section-shell">
             <p className="eyebrow reveal">Contact</p>
-            <h2 className="reveal">Have a role or project in mind?<br /><em>Let&apos;s make it real.</em></h2>
+            <h2 className="reveal">Want to work together?<br /><em>Send me a note.</em></h2>
             <div className="contact-actions reveal">
               <a className="contact-email" href="mailto:rthothakuri@gmail.com">rthothakuri@gmail.com <span>↗</span></a>
               <a href="tel:+19453331677">+1 945 333 1677</a>
@@ -206,7 +201,6 @@ export default function Portfolio() {
 
       <footer>
         <span>© {new Date().getFullYear()} Ramakrishna T</span>
-        <span>Designed with paper, ink &amp; purposeful motion.</span>
         <div><a href="/Ramakrishna_T_Resume.docx" download>Download résumé ↓</a><a href="#top">Back to top ↑</a></div>
       </footer>
     </>

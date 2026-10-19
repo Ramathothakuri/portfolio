@@ -105,14 +105,12 @@ nav .nav-contact span { margin-left: .75rem; color: var(--red); }
 .stack-card:nth-child(4) { grid-column: span 5; transform: rotate(-.4deg); }
 .stack-card:nth-child(5) { grid-column: 2 / span 10; transform: rotate(.2deg); }
 .stack-card:hover { z-index: 3; transform: translateY(-7px) rotateX(1deg) rotateY(-1deg); box-shadow: 15px 18px 0 rgba(72,55,30,.11); }
-.stack-card header { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: .7rem; align-items: center; padding-bottom: .85rem; border-bottom: 1px solid var(--rule); }
+.stack-card header { padding-bottom: .85rem; border-bottom: 1px solid var(--rule); }
 .stack-card h3 { margin: 0; font: 400 clamp(1.3rem,2vw,1.8rem)/1 var(--serif); }
-.stack-card small { color: var(--ink-muted); font: 400 .52rem var(--mono); text-transform: uppercase; }
 .tech-list { display: flex; flex-wrap: wrap; gap: 0 .85rem; padding-top: .65rem; }
 .tech-list span { padding: .46rem 0; border-bottom: 1px dotted var(--rule); color: #4e4b43; font: 400 .59rem/1.2 var(--mono); }
 
 .education { padding-top: clamp(4.5rem,6vw,6.5rem); padding-bottom: clamp(4.5rem,6vw,6.5rem); }
-.education .section-heading { grid-template-columns: 1fr; }
 .education-grid { display: grid; grid-template-columns: 1.08fr .92fr; gap: .9rem; }
 .degree { position: relative; min-height: 190px; display: grid; grid-template-columns: auto minmax(0,1fr) auto; gap: 1.1rem; align-items: start; padding: clamp(1.25rem,2vw,1.8rem); border: 1px solid var(--rule-strong); background: rgba(247,242,231,.48); box-shadow: 6px 7px 0 rgba(72,55,30,.07); }
 .degree-primary { background: var(--paper-light); transform: rotate(-.3deg); }
@@ -167,7 +165,7 @@ footer a { color: var(--paper-light); }
   .hero-intro { grid-template-columns: 1fr; }
   .hero-intro p:first-child { grid-column: 1; }
   .hero-art { order: 2; min-height: min(70vh,580px); }
-  .section-heading,.education .section-heading { grid-template-columns: 1fr; gap: .8rem; }
+  .section-heading { gap: .8rem; }
   .section-heading h2 { font-size: clamp(3.7rem,16vw,6rem); }
   .experience-entry { grid-template-columns: 1fr; gap: .7rem; }
   .entry-date,.entry-role,.entry-detail { grid-column: 1; }

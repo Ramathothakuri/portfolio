@@ -1,36 +1,12 @@
-# Dependencies
 /node_modules
-/.pnp
-.pnp.*
-
-# Next.js
 /.next
 /out
-
-# Tests
-/coverage
-
-# Environment files
 .env*
-!.env.example
-
-# Vercel
 .vercel
-
-# TypeScript
 next-env.d.ts
 *.tsbuildinfo
-
-# Local system files
 .DS_Store
 *.pem
-
-# Tool-generated AI instruction files
 AGENTS.md
 CLAUDE.md
-
-# Logs
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*

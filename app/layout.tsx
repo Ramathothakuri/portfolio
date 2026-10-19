@@ -3,20 +3,18 @@ import "./globals.css";
 
 const vercelProductionDomain = process.env.VERCEL_PROJECT_PRODUCTION_URL;
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  (vercelProductionDomain
+  vercelProductionDomain
     ? `https://${vercelProductionDomain}`
-    : "http://localhost:3000");
+    : "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Ramakrishna T — Full Stack Developer",
-  description:
-    "Ramakrishna T is a senior full-stack developer building reliable Java, Spring, React, AWS, healthcare, fintech, and banking systems.",
+  description: "Portfolio of Ramakrishna T, a full-stack developer working with Java, Spring Boot, React, TypeScript, and AWS.",
   alternates: { canonical: siteUrl },
   openGraph: {
     title: "Ramakrishna T — Full Stack Developer",
-    description: "Full-stack engineering across Java, Spring Boot, React, TypeScript, and AWS.",
+    description: "Java, Spring Boot, React, TypeScript, and AWS.",
     url: siteUrl,
     siteName: "Ramakrishna T Portfolio",
     type: "website",

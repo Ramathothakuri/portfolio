@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
-type PaperPanel = THREE.Group & { userData: { phase?: number; drift?: number } };
+type PaperPanel = THREE.Group & { userData: { phase?: number; baseY?: number } };
 
 export default function SystemField() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -77,7 +77,7 @@ export default function SystemField() {
       panel.add(new THREE.LineSegments(new THREE.EdgesGeometry(geometry, 28), ink));
       panel.position.set(...position);
       panel.rotation.set(...rotation);
-      panel.userData = { phase, drift: 0.018 + phase * 0.002 };
+      panel.userData = { phase, baseY: position[1] };
       sculpture.add(panel);
       panels.push(panel);
       return panel;
@@ -186,7 +186,8 @@ export default function SystemField() {
 
         panels.forEach((panel) => {
           const phase = panel.userData.phase ?? 0;
-          panel.position.y += Math.sin(time * 0.46 + phase) * 0.0008;
+          const baseY = panel.userData.baseY ?? 0;
+          panel.position.y = baseY + Math.sin(time * 0.46 + phase) * 0.06;
         });
         notes.children.forEach((child, index) => {
           const note = child as THREE.Mesh;

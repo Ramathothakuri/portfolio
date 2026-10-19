@@ -1,6 +1,6 @@
 # Ramakrishna T — Portfolio
 
-A production-ready Next.js portfolio built with TypeScript, React, Three.js, and responsive CSS.
+A Next.js portfolio built with TypeScript, React, Three.js, and CSS.
 
 ## Local development
 
@@ -35,12 +35,4 @@ Vercel automatically detects this repository as a Next.js application.
 
 No custom output directory or build command is required.
 
-### Optional production URL
-
-Vercel supplies `VERCEL_PROJECT_PRODUCTION_URL` automatically. To force a custom canonical URL, add this environment variable in the Vercel project settings:
-
-```text
-NEXT_PUBLIC_SITE_URL=https://your-domain.com
-```
-
-The value must include `https://` and must not end with a slash.
+Vercel supplies the production URL automatically.
